@@ -1,10 +1,6 @@
 TutorialBot
 =======================
 
-[![Latest Stable Version](https://poser.pugx.org/phpunit/phpunit/version)](https://packagist.org/packages/phpunit/phpunit)
-[![Latest Unstable Version](https://poser.pugx.org/phpunit/phpunit/v/unstable)](//packagist.org/packages/phpunit/phpunit)
-
-
 The public repository for my tutorial bot which was coded in my discord.js bot coding tutorial
 
 
