@@ -7,6 +7,8 @@ Open Command Prompt and navigate to desired folder where the repository will clo
 # Step 2:
 Type git clone https://github.com/WarhawkYT/TutorialBot.git
 # Step 3:
-Rename token.example.json to token.json and imput your bot token into the empty "" quotes
+Change Directory into the cloned repository and run npm install
 # Step 4:
+Rename token.example.json to token.json and imput your bot token into the empty "" quotes
+# Step 5:
 Run the bot with node . or node server.js
