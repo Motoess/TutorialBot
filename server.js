@@ -14,6 +14,12 @@ const serverStats = { // Change the ID's to your channel ID's
     botCountID: '524749224290549791'
 };
 
+const botStats = { // Change the ID's to your channel ID's
+    totalGuildsID: '524809024282296342',
+    totalUsersID: '524751843960684544',
+    totalChannelsID: '524809068007784448'
+};
+
 // Listener Events
 client.on('message', message => {
 
@@ -61,6 +67,22 @@ client.on('guildMemberRemove', member => {
     client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.user.bot).size}`);
     client.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.user.bot).size}`);
+
+});
+
+client.on('guildCreate', guild => {
+
+    client.channels.get(botStats.totalGuildsID).setName(`Total Guilds : ${client.guilds.size}`);
+    client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount)}`);
+    client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
+
+});
+
+client.on('guildDelete', guild => {
+
+    client.channels.get(botStats.totalGuildsID).setName(`Total Guilds : ${client.guilds.size}`);
+    client.channels.get(botStats.totalUsersID).setName(`Total Users : ${client.guilds.reduce((a, g) => a + g.memberCount)}`);
+    client.channels.get(botStats.totalChannelsID).setName(`Total Channels : ${client.channels.size}`);
 
 });
 
