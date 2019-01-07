@@ -10,6 +10,7 @@
   "author": "Warhawk",
   "license": "ISC",
   "dependencies": {
+    "ascii-art": "^1.5.0",
     "discord.js": "^11.4.2"
   }
 }
